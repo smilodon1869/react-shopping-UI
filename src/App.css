@@ -1,0 +1,167 @@
+/* Header.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color:bisque;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.navLinks ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks ul li {
+  font-size: 1rem;
+}
+
+.navLinks ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLinks ul li a:hover {
+  color: #ff6200;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 0.5;
+}
+
+.search input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search input:focus {
+  box-shadow: 0 0 5px rgba(255, 98, 0, 0.5);
+}
+
+.searchButton {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #ff6200;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.userActions .signin,
+.userActions .cart {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.userActions .signin span {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.userActions .icon {
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.userActions .icon:hover {
+  color: #ff6200;
+}
+
+.bannerBox {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bannerBox img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.menImages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.menImages img {
+  width: calc(33.33% - 10px);
+  max-width: 220px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menImages img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .menImages img {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .menImages img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navLinks ul {
+    gap: 10px;
+  }
+
+  .userActions {
+    gap: 10px;
+  }
+}
